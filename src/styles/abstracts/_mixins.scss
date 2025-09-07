@@ -1,0 +1,14 @@
+@mixin respond-to($bp) {
+  @if $bp == sm  { @media (min-width: $bp-sm)  { @content; } }
+  @else if $bp == md { @media (min-width: $bp-md) { @content; } }
+  @else if $bp == lg { @media (min-width: $bp-lg) { @content; } }
+  @else if $bp == xl { @media (min-width: $bp-xl) { @content; } }
+}
+
+@mixin transition($props: all, $time: 0.3s, $ease: ease-in-out) {
+  transition: $props $time $ease;
+}
+
+@mixin box-shadow($props: all, $time: 0.3s, $ease: ease-in-out) {
+  box-shadow: $props $time $ease;
+}

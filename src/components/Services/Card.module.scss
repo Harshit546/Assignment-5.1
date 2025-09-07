@@ -1,0 +1,92 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.service-card {
+  @include transition(transform, 0.3s, ease);
+  @include box-shadow(box-shadow, 0.3s, ease);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-md;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  &__design,
+  &__revdesign {
+    pointer-events: none;
+    object-fit: contain;
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+  }
+
+  &__design {
+    left: 0;
+    width: 10rem;
+    height: 24rem;
+  }
+
+  &__revdesign {
+    right: 0;
+    width: 10rem;
+    height: 20rem;
+  }
+
+  &__image {
+    width: 16rem;
+    @include respond-to(sm) {
+      width: 100%;
+      max-width: 28.125rem;
+    }
+  }
+
+  &__content {
+    max-width: 31.25rem;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: $space-xs;
+    font-weight: 500;
+
+    @include respond-to(lg) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.48;
+
+    @include respond-to(lg) {
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+  }
+
+  @include respond-to(lg) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+    align-items: center;
+  }
+
+  &--reverse {
+    @include respond-to(lg) {
+      flex-direction: row-reverse;
+      .service-card__content {
+        text-align: right;
+      }
+    }
+  }
+}

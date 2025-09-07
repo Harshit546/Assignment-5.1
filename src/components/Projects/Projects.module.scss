@@ -1,0 +1,83 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.projects {
+  font-family: $font-heading;
+  text-align: center;
+  margin-top: $space-xxl;
+  padding: 0 $space-xxl;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14rem;
+    height: 25rem;
+    background: url("/design9.svg") no-repeat center/contain;
+    opacity: 0.8;
+    z-index: -1;
+  }
+
+  &__heading {
+    margin-bottom: $space-lg;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: $space-sm;
+
+    @include respond-to(md) {
+      font-size: 3rem;
+    }
+  }
+
+  &__bar {
+    max-width: 100%;
+    margin-bottom: $space-xl;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-xl;
+
+    @include respond-to(md) {
+      grid-template-columns: 2fr 3fr;
+      gap: $space-xxxl;
+    }
+  }
+
+  &__item--large {
+    width: 100%;
+
+    @include respond-to(md) {
+      width: 110%;
+    }
+  }
+
+  &__item-group {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: $space-xl;
+
+    @include respond-to(md) {
+      gap: $space-lg;
+    }
+  }
+
+  &__item--small {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+
+    @include respond-to(md) {
+      width: 70%;
+    }
+  }
+}

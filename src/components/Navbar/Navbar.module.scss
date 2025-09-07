@@ -1,0 +1,103 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  padding: $space-sm $space-xxxl;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  &::after {
+    width: 15rem;
+    height: 40rem;
+    top: 0;
+    right: 0;
+    background-image: url("/design2.svg");
+  }
+
+  @include respond-to(sm) {
+    &::before {
+      width: 6rem;
+      height: 6rem;
+      top: 0;
+      left: 0;
+      background-image: url("/design1.svg");
+    }
+  }
+
+  @include respond-to(md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    img {
+      display: block;
+      width: 10rem;
+      height: auto;
+      @include respond-to(md) {
+        width: 14rem;
+      }
+      @include respond-to(lg) {
+        width: 18rem;
+      }
+    }
+  }
+
+  &__menu {
+    margin-top: $space-sm;
+
+    @include respond-to(md) {
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      gap: $space-lg;
+    }
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    font-family: $font-base;
+    font-size: 0.875rem;
+    color: $color-text;
+    text-decoration: none;
+    @include transition(color, 0.2s);
+
+    &:hover {
+      color: $color-accent;
+      font-weight: 500;
+    }
+
+    &--active {
+      color: $color-accent;
+      font-weight: 600;
+    }
+
+    @include respond-to(sm) {
+      font-size: 1.125rem;
+    }
+  }
+}

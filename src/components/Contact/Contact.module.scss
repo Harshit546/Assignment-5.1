@@ -1,0 +1,31 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.contact {
+  background-color: $color-bg-light;
+  color: $color-text;
+  font-family: $font-base;
+  padding: $space-lg 0;
+  margin: 0 $space-lg;
+
+  @include respond-to(lg) {
+    margin: 0 $space-xxxl;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-lg;
+    max-width: 75rem;
+    margin: 0 auto;
+
+    @include respond-to(xs) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(4, 1fr);
+      margin: 0 auto;
+    }
+  }
+}

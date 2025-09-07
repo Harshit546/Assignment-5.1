@@ -1,0 +1,13 @@
+@import '../../styles/abstracts/variables';
+
+.footer {
+  margin-top: $space-lg;
+  text-align: center;
+
+  &__statement {
+    font-family: $font-heading;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $color-text;
+  }
+}

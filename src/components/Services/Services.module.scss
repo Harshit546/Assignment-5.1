@@ -1,0 +1,34 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.services {
+  padding-top: $space-xl;
+  font-family: $font-heading;
+  text-align: center;
+  align-items: center;
+
+  &__heading {
+    margin-bottom: $space-md;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: $space-sm;
+
+    @include respond-to(lg) {
+      font-size: 3rem;
+    }
+  }
+
+  &__bar {
+    max-width: 100%;
+    margin-bottom: $space-lg;
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xxl;
+  }
+}

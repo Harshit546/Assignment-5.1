@@ -1,0 +1,40 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.client-logo {
+  @include transition(transform, 0.3s, ease);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    img {
+      filter: brightness(1.1);
+    }
+  }
+
+  &--small {
+    max-width: 7.5rem;
+    @include respond-to(md) {
+      max-width: 5rem;
+    }
+    @include respond-to(lg) {
+      max-width: 9.375rem;
+    }
+  }
+
+  &--large {
+    max-width: 9.375rem;
+    @include respond-to(md) {
+      max-width: 6.25rem;
+    }
+    @include respond-to(lg) {
+      max-width: 12.5rem;
+    }
+  }
+}

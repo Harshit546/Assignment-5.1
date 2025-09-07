@@ -1,0 +1,62 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.logo {
+  font-family: $font-heading;
+  text-align: left;
+  padding: 0 $space-xl;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include respond-to(md) {
+      font-size: 3rem;
+      padding: 0 $space-xl;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 10rem;
+    height: auto;
+    padding: 0 $space-xl;
+    @include respond-to(md) {
+      width: 14rem;
+    }
+    @include respond-to(lg) {
+      width: 18rem;
+    }
+  }
+}
+
+.clients {
+  font-family: $font-heading;
+  text-align: left;
+  padding: 0 $space-xl;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: $space-xxl;
+
+    @include respond-to(md) {
+      font-size: 3rem;
+      padding: 0 $space-xl;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-xl;
+    margin-bottom: $space-xxl;
+    justify-items: center;
+
+    @include respond-to(md) {
+      grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    }
+  }
+}

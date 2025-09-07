@@ -1,0 +1,19 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.project-image {
+  img {
+    @include transition(transform, 0.3s, ease);
+    @include box-shadow(box-shadow, 0.3s, ease);
+
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
