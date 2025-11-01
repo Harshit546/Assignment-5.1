@@ -4,16 +4,16 @@ import styles from "./Column.module.scss";
 
 const Column = ({ title, items, links, text }) => (
   <div className={styles.column}>
-    <h4 className={styles["column__title"]}>{title}</h4>
+    <h4 className={styles.column__title}>{title}</h4>
 
     {items && (
-      <ul className={styles["column__list"]}>
+      <ul className={styles.column__list}>
         {items.map(({ label, icon, href }) => (
-          <li key={label} className={styles["column__item"]}>
+          <li key={label} className={styles.column__item}>
             <a
               href={href}
               aria-label={label}
-              className={styles["column__link"]}
+              className={styles.column__link}
             >
               <img src={icon} alt={label} />
               {label}
@@ -24,10 +24,10 @@ const Column = ({ title, items, links, text }) => (
     )}
 
     {links && (
-      <ul className={styles["column__list"]}>
+      <ul className={styles.column__list}>
         {links.map(({ label, to }) => (
-          <li key={label} className={styles["column__item"]}>
-            <a href={to} className={styles["column__link"]}>
+          <li key={label} className={styles.column__item}>
+            <a href={to} className={styles.column__link}>
               {label}
             </a>
           </li>
@@ -35,7 +35,7 @@ const Column = ({ title, items, links, text }) => (
       </ul>
     )}
 
-    {text && <p className={styles["column__text"]}>{text}</p>}
+    {text && <p className={styles.column__text}>{text}</p>}
   </div>
 );
 

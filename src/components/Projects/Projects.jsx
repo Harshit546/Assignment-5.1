@@ -22,16 +22,16 @@ const projects = [
 
 const Projects = () => (
   <section className={styles.projects}>
-    <div className={styles["projects__heading"]}>
-      <h2 className={styles["projects__title"]}>OUR PROJECTS</h2>
+    <div className={styles.projects__heading}>
+      <h2 className={styles.projects__title}>OUR PROJECTS</h2>
       <img
         src="/about_bar.svg"
         alt="decorative bar"
-        className={styles["projects__bar"]}
+        className={styles.projects__bar}
       />
     </div>
 
-    <div className={styles["projects__grid"]}>
+    <div className={styles.projects__grid}>
       <div className={styles["projects__item--large"]}>
         <Images {...projects[0]} />
       </div>

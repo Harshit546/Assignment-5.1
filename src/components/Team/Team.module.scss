@@ -34,7 +34,6 @@
 
     @include respond-to(md) {
       grid-template-columns: repeat(3, 1fr);
-      gap: $space-xxl;
     }
   }
 }

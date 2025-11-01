@@ -17,34 +17,34 @@ const fourthRow = ["client15.svg", "client16.svg", "client17.svg", "client18.svg
 const ClientLogos = () => (
   <section>
     <div className={styles.logo}>
-      <h2 className={styles["logo__title"]}>Logo</h2>
-      <NavLink to="/" className={styles["logo__image"]}>
+      <h2 className={styles.logo__title}>Logo</h2>
+      <NavLink to="/" className={styles.logo__image}>
         <img src="/logo.jpg" alt="Company Logo" />
       </NavLink>
     </div>
     <hr />
     <div className={styles.clients}>
-      <h2 className={styles["clients__title"]}>OUR CLIENTS</h2>
+      <h2 className={styles.clients__title}>OUR CLIENTS</h2>
 
-      <div className={styles["clients__row"]}>
+      <div className={styles.clients__row}>
         {firstRow.map((src) => (
           <Logos key={src} src={src} variant="small" />
         ))}
       </div>
 
-      <div className={styles["clients__row"]}>
+      <div className={styles.clients__row}>
         {secondRow.map((src) => (
           <Logos key={src} src={src} variant="large" />
         ))}
       </div>
 
-      <div className={styles["clients__row"]}>
+      <div className={styles.clients__row}>
         {thirdRow.map((src) => (
           <Logos key={src} src={src} variant="small" />
         ))}
       </div>
 
-      <div className={styles["clients__row"]}>
+      <div className={styles.clients__row}>
         {fourthRow.map((src) => (
           <Logos key={src} src={src} variant="large" />
         ))}

@@ -65,12 +65,12 @@
       z-index: 2;
 
       @include respond-to(sm) {
-        width: 28rem;
+        width: 30rem;
       }
       @include respond-to(md) {
         margin-bottom: 0;
         padding-top: $space-xl;
-        margin-top: $space-lg;
+        margin-top: 10rem;
       }
     }
   }
@@ -78,6 +78,10 @@
   &__content {
     max-width: 34rem;
     margin-top: $space-xs;
+
+    @include respond-to(md) {
+      margin-top: -10rem;
+    }
   }
 
   &__title {

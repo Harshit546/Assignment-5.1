@@ -13,15 +13,15 @@ const secondRow = ["client6.svg", "client7.svg", "client8.svg", "client9.svg"];
 
 const Clients = () => (
   <section className={styles.clients}>
-    <h2 className={styles["clients__title"]}>OUR CLIENTS</h2>
+    <h2 className={styles.clients__title}>OUR CLIENTS</h2>
 
-    <div className={styles["clients__row"]}>
+    <div className={styles.clients__row}>
       {firstRow.map((src) => (
         <Logos key={src} src={src} variant="small" />
       ))}
     </div>
 
-    <div className={styles["clients__row"]}>
+    <div className={styles.clients__row}>
       {secondRow.map((src) => (
         <Logos key={src} src={src} variant="large" />
       ))}

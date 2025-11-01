@@ -42,16 +42,16 @@ const servicesData = [
 
 const Services = () => (
   <section className={styles.services}>
-    <div className={styles["services__heading"]}>
-      <h2 className={styles["services__title"]}>SERVICES</h2>
+    <div className={styles.services__heading}>
+      <h2 className={styles.services__title}>SERVICES</h2>
       <img
         src="/about_bar.svg"
         alt="decorative bar"
-        className={styles["services__bar"]}
+        className={styles.services__bar}
       />
     </div>
 
-    <div className={styles["services__grid"]}>
+    <div className={styles.services__grid}>
       {servicesData.map((svc, idx) => (
         <Card key={svc.title} {...svc} reverse={idx % 2 === 0} />
       ))}

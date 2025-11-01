@@ -10,16 +10,16 @@ const teamMembers = [
 
 const Team = () => (
   <section className={styles.team}>
-    <div className={styles["team__heading"]}>
-      <h2 className={styles["team__title"]}>OUR TEAM</h2>
+    <div className={styles.team__heading}>
+      <h2 className={styles.team__title}>OUR TEAM</h2>
       <img
         src="/about_bar.svg"
         alt="decorative bar"
-        className={styles["team__bar"]}
+        className={styles.team__bar}
       />
     </div>
 
-    <div className={styles["team__grid"]}>
+    <div className={styles.team__grid}>
       {teamMembers.map((member) => (
         <Card key={member.name} name={member.name} image={member.image} />
       ))}

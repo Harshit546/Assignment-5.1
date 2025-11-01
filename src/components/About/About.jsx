@@ -17,18 +17,18 @@ const cards = [
 
 const About = () => (
   <section className={styles.about}>
-    <div className={styles["about__image"]}>
+    <div className={styles.about__image}>
       <img src="/about_img.svg" alt="About Us" />
     </div>
 
-    <div className={styles["about__content"]}>
-      <h2 className={styles["about__title"]}>ABOUT US</h2>
+    <div className={styles.about__content}>
+      <h2 className={styles.about__title}>ABOUT US</h2>
       <img
         src="/about_bar.svg"
         alt="decorative bar"
-        className={styles["about__bar"]}
+        className={styles.about__bar}
       />
-      <p className={styles["about__text"]}>
+      <p className={styles.about__text}>
         We love what we do and are driven by achieving great results for our
         clients. Our awards and impressive client list are testament to our high
         quality approach. We deliver value, creativity, results and exceptional
@@ -36,7 +36,7 @@ const About = () => (
         infrastructure development, energy and natural resources.
       </p>
 
-      <div className={styles["about__cards"]}>
+      <div className={styles.about__cards}>
         {cards.map((card) => (
           <Card key={card.title} {...card} />
         ))}
